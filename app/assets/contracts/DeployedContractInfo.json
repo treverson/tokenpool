@@ -1,0 +1,15 @@
+
+{
+  "networks": {
+      "mainnet": {
+              "contracts": {
+                "_0xbitcointoken": {"name":"0xBitcoinToken", "blockchain_address":"0xb6ed7644c69416d67b522e20bc294a9a9b405b31"}
+              }
+            },
+      "testnet": {
+              "contracts": {
+                "_0xbitcointoken": {"name":"0xBitcoinToken", "blockchain_address":"0x9d2cc383e677292ed87f63586086cff62a009010"}
+              }
+            }
+    }
+}
