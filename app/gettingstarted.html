@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <%= require('html-loader!./assets/html/head.html') %>
+
+  </head>
+  <body>
+
+        <%= require('html-loader!./assets/html/navbar.html') %>
+
+
+<div class="page-container slate-theme " id="profile">
+
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container has-text-centered"  >
+            <h1 class="title font-primary-title color-primary">
+              Getting Started
+            </h1> <p>
+            <h2 class="subtitle"> 
+	      <p><b> Mining software </b></h2><p>
+		<b> 1. NVIDIA Cuda open source (@Mikers/@Azlehria) (requires <a href="http://www.nvidia.com/download/driverResults.aspx/131443/en-us" target="_blank">Nvidia 391.01 drivers</a> and <a href="https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal" target="_blank">Nvidia CUDA 9.1</a>) <p></p>
+            </h2> </b><p>
+		<a href="https://github.com/azlehria/0xbitcoin-gpuminer/releases" target="_blank">
+          <div class='button-bubble button-primary'>Download CUDA Miner (Win/Linux) from Github</a></div><br>
+   	 * Use version 2.10 for Windows 10 and version 2.9 for Windows 7.<p>
+	<div class="">
+	<br>
+ 		Run miner <b>'0xbtcminer-win.exe'</b> <br>
+                Type <b>'help'</b> for all commands <br>
+                For new miners: new account: <b>'account new'</b>. Enter new/your password and remember it <br>
+		* Current miners can use the same ETH address they used before or create new address
+                To view and copy wallet address/private key: <b>'account list'</b>. <br>
+                ***Alwasys save private keys in a safe place and do not share them! <br>
+                Set the miner to mine with this pool <b>'pool select http://0xBTCpool.com:8586</b>' <br>
+                Start mining with <b>'pool mine cuda' </b> for GPU 
+
+	 <div class="whitespace-sm"></div>  
+    
+	     <b>2. AMD OpenCL MViS (2% devfee) (Win/Linux) (works with most NVIDIA cards too) </b> <p>
+	
+        <a href="https://github.com/mining-visualizer/MVis-tokenminer/releases" target="_blank">
+          <div class='button-bubble button-primary'>Download OpenCL Miner (Win/Linux) from Github </a></div> <br><p>
+	<div class="">	
+		            
+		<a href="https://github.com/mining-visualizer/MVis-tokenminer/blob/master/README.md" target="_blank"> Developer installation/setup instructions </a><br><br>
+		<li> Move tokenminer.ini to %LocalAppData%/tokenminer on Windows, or $HOME/.config/tokenminer on Linux. 
+		* If that folder path does not exist, you will need to create it manually.
+	<li> For POOL MINING, the main thing you need to specify in the .INI file is your ETH account address to which rewards will be paid out.<br>
+ 	<br>
+	Edit tokenminer.ini <br>
+	Change "Host= " to <b>"Host=http://0xBTCpool.com"</b> and "RPCPort=" to <b>"RPCPort=8586"</b> <br>
+	Add your 0xBTC address to <b>"MinerAcct="0x...............................</b>    *replace 0x............ with your address<br>
+	Save tokenminer.ini         *** Do not add your Privte Key.     <br>
+	To run the miner Open CMD/Command and navigate to the folder you saved the miner to<br>
+	Run <b>'tokenminer.exe --list-devices -G'</b> to find your GPU and the platform #<br>
+	Run <b>'tokenminer.exe -P -G --opencl-platform n'</b> n= your GPU platform #.
+
+           <div class="whitespace-sm"></div>  
+
+
+        </div>
+      </section>
+
+
+    
+
+      <%= require('html-loader!./assets/html/footer.html') %>
+
+
+  </body>
+</html>

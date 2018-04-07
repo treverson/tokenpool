@@ -20,12 +20,20 @@
             <h1 class="title font-primary-title color-primary">
               Miner Profile
             </h1>
-            <h2 class="subtitle">
+            <h2 class="subtitle"> 
+
+<!-- Ravid Add address box    -->
+ 	<br>
+	<form action="/profile/?address="value>
+		Enter your address: <input type="text" size="46" name="address" value=""> 
+		<input type="submit" value="Submit">
+	</form>
+<!-- Ravid Add address box    -->
 
             </h2>
 
 
-             <div class="whitespace-sm"></div>
+ <!--            <div class="whitespace-sm"></div>  -->
 
 
         </div>
@@ -43,7 +51,11 @@
             </a>
           </td>
        </tr>
-        <tr> <td> Accumulated Shares: {{  miner.minerData.shareCredits }}  </td> </tr>
+           <tr> <td> Accumulated Shares: {{  miner.minerData.shareCredits }}  </td> </tr>
+       	   <tr> <td> Balance: {{  miner.minerData.tokenBalance }}  </td> </tr>
+
+	   <tr> <td> Vardiff: {{  miner.minerData.varDiff }}  </td> </tr>
+    	   <tr> <td> Hashrate: {{  miner.minerData.hashRate }}  </td> </tr>
 
      </tbody>
       </table>
@@ -85,6 +97,37 @@
         </table>
 
       </div>
+ <!-- Ravid 20180325 - TMP update - invaild shares --> 
+<!--  </div> -->
+
+      <div id="minerInvalidSharesList" class="box background-secondary " style="overflow-x:auto; min-height:480px;">
+        <div class='subtitle'>Invalid Shares</div>
+        <table class='table table-dark'>
+
+          <thead>
+            <tr >
+              <td> EthBlock </td>
+              <td> Time </td>
+
+              <td> Difficulty </td>
+              <td> Nonce </td>
+
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr v-for="(item, index) in shares.share_list">
+              <td>    {{ item.block }} </td>
+              <td>    {{ item.timeFormatted }} </td>
+
+              <td>    {{ item.difficulty }} </td>
+              <td>    {{ item.nonce }} </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+ <!-- End Ravid 20180325 - TMP update - invaild shares --> 
 
       <div id="minerBalancePaymentsList" class="box background-secondary " style="overflow-x:auto; min-height:480px;">
         <div class='subtitle'>Balance Payments</div>
@@ -153,33 +196,6 @@
         </table>
 
       </div>
-
-
-
-
-
-
-     <div id="about" class="   background-secondary has-text-centered">
-
-        <div class="whitespace-sm"></div>
-        <div class='title'> 0xBTCpool.com - 0xBTC Token Mining Pool </div>
-        <div class="whitespace-sm"></div>
-        <div class='subtitle '> Mine Ethereum tokens distributed using Proof of Work </div>
-
-
-        <div class="">
-
-        </div>
-
-        <div class="">
-          <p> Read more on <a href="https://reddit.com/r/tokenmining" target="_blank"> Reddit </a> <br>
-	     For support/updates/announcements, join us on <a href="https://discord.gg/s4EPKaq" target="_blank"> Discord</a> 
-
-        </div>
-      </div>
-
-
-
 
   </div>
 

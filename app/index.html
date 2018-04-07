@@ -12,56 +12,25 @@
       <section class="hero circuit-overlay">
         <div class="hero-body">
           <div class="container has-text-centered" id="jumbotron">
-            <h1 class="title font-primary-title color-primary"> 0xBTCpool - 0xBTC Token Mining
-              Pool v1.27</h1>
-             <a v-bind:href="pool.etherscanContractURL">
-              <p> {{pool.poolData.address}}</p>
-            </a>
-            <div class="columns">
-              <div class="column   is-half-desktop " style=" margin: 0 auto;"> <canvas
+            <h1 class="title font-primary-title color-primary"> 0xBTCpool - 0xBTC Token Mining Pool v1.3.5</h1>
+		<a v-bind:href='pool.poolData.etherscanMintingURL' >
+                <p>Minting: {{pool.poolData.mintingAddress}}</p>
+               </a>
 
-                  id="hashgraph"></canvas> </div>
+              <a v-bind:href='pool.poolData.etherscanPaymentURL' >
+                <p>Payments: {{pool.poolData.paymentAddress}}</p><br>
+              </a>
+
+             
+            <div class="columns">
+              <div class="column   is-half-desktop " style=" margin: 0 auto;"> <canvas id="hashgraph"></canvas> </div>
             </div>
             
-            <a href="/account" target="_blank">
-              <div class="button-bubble button-primary">View Account Shares</div>
-            </a>
-            <a href="/overview" target="_blank">
-               <div class='button-bubble button-primary'> View Pool Info </div>
-             </a> <p>
-             <div class="whitespace-sm"></div> 
+            <div class="whitespace-sm"></div> 
           </div>
         </div>
       </section>
-      <div id="guide" class="box background-secondary has-text-centered ">
-       
-        <div class="toggle-mining-instructions acts-as-link color-fun-secondary">Instructions</div>
-        <div class="mining-instructions-container">
-          <div class="columns">
-            <div class="column background-primary color-orange is-half-desktop "
-
-              style=" margin: 0 auto;">
-               <div class="title"> <b> Download the CPU/GPU (nvidia) Miner from Github</b></div>
-       
-        <a href="https://github.com/0xbitcoin/0xbitcoin-miner/dist" target="_blank">
-          <div class="button-bubble button-primary">Download CPU Miner</div>
-        </a>
-        <a href="https://github.com/0xbitcoin/0xbitcoin-gpuminer/dist" target="_blank">
-          <div class="button-bubble button-primary">Download GPU Miner</div>
-        </a>
-             <p>
-             <div class="subtitle"> New miners: Run miner '0xbtcminer-win.exe' (windows) or './0xbtcminer-linux' (linux)<br>
-             Type 'help' for all commands<br>
-     Create new account: 'account new'. Enter new/your password and remember it <br>
-		 To view and copy wallet address/private key: 'account list'. <br>
-		    ***Save private keys in a safe place and do not share them!<br>
-		 Set the miner to mine with this pool 'pool select http://0xBTCpool.com:8586'</p>
-     <p>Start mining with 'pool mine' for CPU or 'pool mine cuda' for GPU</p> 
-     <hr>
-            </div>
-          </div>
-        </div>
-      </div>
+     
       <div id="solutiontxlist" class="box background-secondary transaction-list "
 
         style="overflow-x:auto; min-height:480px;">
@@ -94,8 +63,6 @@
             <tr>
               <td> Block </td>
               <td> TxHash </td>
-              <td> <br>
-              </td>
               <td> Status </td>
             </tr>
           </thead>
@@ -107,19 +74,6 @@
             </tr>
           </tbody>
         </table>
-      </div>
-      <div id="about" class="box background-secondary has-text-centered">
-        <div class="whitespace-sm"></div>
-        <div class="title"> 0xBTCpool.com 0xBTC Token Mining Pool </div>
-        <div class="whitespace-sm"></div>
-        <div class="subtitle "> Mine Ethereum tokens distributed using Proof of
-          Work </div>
-        <div class=""> </div>
-        <div class="">
-          <p> Read more on <a href="https://reddit.com/r/tokenmining" target="_blank"> Reddit </a> <br>
-	    For support/updates/announcements, join us on <a href="https://discord.gg/s4EPKaq" target="_blank">
-               Discord</a> </p>
-        </div>
       </div>
     </div>
       <%= require('html-loader!./assets/html/footer.html') %>

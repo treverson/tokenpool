@@ -1,23 +1,31 @@
 <nav id="navbar" class="navbar slate-theme-dark" role="navigation" aria-label="main navigation">
-       <div class="navbar-brand" style="padding-left:10px;">
-         <a class="navbar-item" href="/">
-           <img :src="brandImageUrl" height="28" width="28" />
-         </a>
-
-
-
-       </div>
-
-       <div class="navbar-menu">
-         <div class="navbar-end" style="padding:5px;">
-           <a href="https://github.com/0xbitcoin/tokenpool" target="_blank">
-             <img :src="githubLogo" height="28" width="28" target="_blank"/>
-           </a>
-
-
-
-
-
-         </div>
-       </div>
+	<div class="navbar-brand" style="padding-left:10px;">
+		<a class="navbar-item" href="/"> 
+			<img :src="brandImageUrl" height="28" width="28"/>
+		</a>
+		
+	</div>
+	<div class="navbar-center">
+		<span class="navUp">
+			<span><a href="/account">Pool Accounts</a></span>
+			<span><a href="/overview">Pool Info</a></span>
+			<span><a href="/profile">Miner Info</a></span>
+			<span><a href="/gettingstarted">Getting Started</a></span>
+		</span>
+		<span class="navDown">
+			<span><a href="https://0x1d00ffff.github.io/0xBTC-Stats/" target="_blank">0xBitcoin Statistics</a></span>
+			<span><a href="http://0xbitcoin.org/wallet/" target="_blank">Web Wallet</a></span>
+			<span><a href="">Community</a></span>
+		</span>
+	</div>
+	<div class="navbar-menu">
+		<div class="navbar-end" style="padding:5px;">
+			<a class="navbar-item" Support: href="https://discordapp.com/channels/420386721566294016/420387228993323008">
+				<img :src="discordImg" target="_blank" width="28" height="28">
+			</a>
+			<a href="https://github.com/0xbitcoin/tokenpool" target="_blank">
+				<img :src="githubLogo" height="28" width="28" target="_blank"/>
+			</a>
+		</div>
+	</div>
 </nav>

@@ -1,233 +1,375 @@
 
-
-
-html
-{
+html {
   //color: white;
   //background-color: pink;
   font-family: "Arial, Helvetica, sans-serif";
-
-
 }
 
-a
-{
-  color: #ff7209;
+a {
+  color: #f26604;
+  font-weight: 600;
+}
+a:hover {
+  color: #f26604;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
-
-.font-primary-title
-{
-    font-family: 'Roboto Mono', monospace;
+.font-primary-title {
+  font-family: 'Roboto Mono', monospace;
 }
 
-.color-primary
-{
-  color: #ff7209;
+.color-primary {
+  // HERE ** >>
+  color: blue;
 }
 
-.button-primary
-{
-  color: black;
-
-   background: linear-gradient(#ff7209, #ff6206);
+.button-primary {
+  color: white;
+  background: linear-gradient(#007224, #0a7000);
 }
 
-.button-secondary
-{
-  color: #ff7209;
-
-   background: linear-gradient(#fff, #eee);
+.button-secondary {
+  // HERE ** >>
+  color: blue;
+  background: linear-gradient(#fff, #eee);
 }
 
-.button-bubble
-{
-  padding:8px;
-  border: 1px solid black;
+.button-bubble {
+  padding: 8px;
+  //border: 1px solid black;
   border-radius: 3px;
   display: inline-block;
 }
 
-.navbar-item
-{
-  padding: 2px;
+.navbar-item {
+  padding: 2px 6px;
 }
 
 @media only screen and (max-width: 768px) {
 
-  .has-small-text-mobile
-  {
+  .has-small-text-mobile {
     font-size: 10px;
   }
 }
 
-.orange-theme
-{
-  background-color: #ff7209;
+.orange-theme {
+  // HERE ** >>
+  //ff7209
+  background-color: blue;
 
-
-
-  .color-primary
-  {
+  .color-primary {
     color: black;
   }
 
-  .button-primary
-  {
+  .button-primary {
     color: black;
 
   }
 
-  .button-secondary
-  {
+  .button-secondary {
     color: black;
 
   }
 }
 
+.transaction-list {
+  .status-success {
+    border-left: 4px solid #6ab04c;
 
-.transaction-list
-{
-  .status-success
-    {
-        border-left: 4px solid #6ab04c;
-
-        .tx-status-cell
-        {
-          color: #6ab04c
-        }
+    .tx-status-cell {
+      color: #6ab04c
     }
+  }
 
-  .status-mined
-  {
+  .status-mined {
     border-left: 4px solid #30336b;
-      .tx-status-cell
-      {
-        color: #30336b
-      }
-  }
-
-  .status-pending
-  {
-    border-left: 4px solid #f9ca24;
-      .tx-status-cell
-      {
-        color: #f9ca24
-      }
-  }
-
-  .status-queued
-  {
-      border-left: 4px solid #22a6b3;
-      .tx-status-cell
-      {
-        color: #22a6b3
-      }
-  }
-
-  .status-unknown
-    {
-        border-left: 4px solid #e056fd;
-
+    .tx-status-cell {
+      color: #30336b
     }
-}
-
-
-
-.title
-{
-  color: #6ab04c;
-
-}
-.subtitle
-{
-    color: black;
-}
-
-
-.slate-theme-dark
-{
-    background-color: #ffffff;
-
-
-}
-
-.color-orange
-{
-   color: #ff7209
-}
-
-.acts-as-link
-{
-  cursor:pointer;
-}
-
-.slate-theme
-{
-    background-color: #ffffff;
-
-
-
-
-  .color-fun-primary
-  {
-      color: #e2c08d;
   }
 
-  .color-fun-secondary
-  {
-      color: #73c990;
+  .status-pending {
+    border-left: 4px solid #f9ca24;
+    .tx-status-cell {
+      color: #f9ca24
+    }
   }
 
-  .background-primary
-  {
-    background-color: #ffffff;
-  }
-  .background-secondary
-  {
-    background-color: #ffffff;
+  .status-queued {
+    border-left: 4px solid #22a6b3;
+    .tx-status-cell {
+      color: #22a6b3
+    }
   }
 
+  .status-unknown {
+    border-left: 4px solid #e056fd;
+
+  }
+}
+
+.title {
+  color: #fe8114;
 
 }
 
-.circuit-overlay
-{
+.subtitle {
+  color: black;
+}
+
+.slate-theme-dark {
+  background-color: #095900;
+}
+
+.color-orange {
+  // HERE ** >>
+  color: blue;
+}
+
+.acts-as-link {
+  cursor: pointer;
+}
+
+.slate-theme {
+  background-color: #ffffff;
+
+  .color-fun-primary {
+    color: #e2c08d;
+  }
+
+  .color-fun-secondary {
+    color: #16841d;
+  }
+
+  .background-primary {
+    background-color: #ffffff;
+  }
+  .background-secondary {
+    background-color: #ffffff;
+  }
+
+}
+
+.circuit-overlay {
   position: relative;
+  //background: url(/app/assets/images/circuits-overlay.png);
+}
 
-  background: url(/app/assets/images/circuits-overlay.png);
+.circuit-overlay:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/app/assets/images/0xbitcoin_Axe.png);
+  background-size: 511px 511px;
+  background-repeat: no-repeat;
+  background-position: center 30px;
+  opacity: 0.2;
 
 }
 
-
-.toggle-mining-instructions
-{
-  padding:10px;
-  margin:10px;
+.toggle-mining-instructions {
+  padding: 10px;
+  margin: 10px;
 
 }
 
-.mining-instructions-container
-{
-  padding:10px;
-  margin:10px;
+.mining-instructions-container {
+  padding: 10px;
+  margin: 10px;
 }
 
-.zeroauto
-{
-  margin:0 auto;
+.zeroauto {
+  margin: 0 auto;
 }
 
-.table-dark
-{
+.table-dark {
   color: black;
   background-color: transparent;
 
-  thead
-  {
+  thead {
     td {
-      color: #73c990;
+      color: #16841d;
     }
   }
 
+}
+
+.navbar-center {
+  position: relative;
+  width: 100%;
+  margin-top: 15px;
+}
+.discord_icon {
+  position: relative;
+  top: 13px;
+  margin: 0 auto;
+  width: 28px;
+}
+.navbar-center > span {
+  position: relative;
+  margin-left: 0.5%;
+
+}
+
+.navbar-center > span a {
+  background-color: #0a5f00;
+  padding: 9px;
+  border-radius: 3px;
+  color: white;
+  font-weight: 400;
+}
+
+.navbar-center > span a:hover {
+  background-color: #094800;
+}
+
+@media only screen and (max-width: 1023px) {
+  .navbar-center {
+    margin-top: -38px;
+    margin-left: 90px; } }
+
+
+.slate-theme-dark {
+  background-color: #095900;
+}
+
+div#home {
+// RA- remove green  background-color: #053400;
+ background-color: #ffffff;
+  border-top: 1px solid #ffd800;
+}
+.navUp > span a, .navDown > span a {
+  background-color: #084b00;
+  padding: 9px;
+  border-radius: 3px;
+  color: white;
+  font-weight: 400;
+}
+.navUp > span a:hover, .navDown > span a:hover {
+  background-color: #094800;
+}
+
+.navDown {
+  margin-left: 0 !important;
+}
+
+.navbar-item {
+  padding: 2px 6px;
+}
+
+.navbar-end {
+  margin: 8px 4px 0 0;
+}
+a.navbar-item:hover {
+  background-color: #094800;
+}
+
+footer.footer.slate-theme-dark {
+  background-color: #ffffff;
+}
+
+div#poolconfig, div#poolstats, div#submittedShares, div#submittedSolutions, div#queuedTransactionsList, div#activeTransactionsList {
+  min-height: 240px !important;
+}
+div#poolstats, div#submittedSolutions, div#activeTransactionsList {
+  background-color: #f1f1f1;
+}
+.table td, .table th {
+  border-right: 1px solid #e9e9e9;
+}
+
+@media only screen and (max-width: 945px) {
+  .navUp {
+    left: 0;
+    top: -56px;
+  }
+  .navDown {
+    position: absolute !important;
+    left: 0;
+    top: -12px;
+  }
+  .navbar-brand, .navbar-tabs {
+    margin-bottom: 56px;
+  }
+}
+
+.column.is-half-desktop {
+  border-radius: 4px;
+  background: linear-gradient(rgba(0,0,0,0), #e3e3e3);
+}
+
+#jumbotron .column.is-half-desktop {
+  border-radius: 4px;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.25));
+}
+
+.mining-instructions-container > div > div > div.title {
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(#0c7700, #095900);
+  text-align: center;
+  margin: 0;
+  font-size: 24px;
+  color: white;
+  padding-bottom: 3px;
+  border-bottom: 1px solid yellow;
+}
+
+@media only screen and (max-width: 1368px) {
+  .subtitle {
+    //width: 90%;
+  }
+}
+
+.transaction-list .status-pending {
+  border-left: 4px solid #ff7b00;
+  background-color: #f6f6f6;
+}
+.transaction-list .status-pending .tx-status-cell {
+  color: #ff7b00;
+  font-weight: 600;
+}
+
+.transaction-list .status-success .tx-status-cell {
+  color: #ffffff;
+  background: linear-gradient(#5a8a51, #0a5f00);
+}
+.transaction-list .status-mined .tx-status-cell {
+  color: lightgrey;
+  background-color: gray;
+}
+.transaction-list .status-mined {
+  border-left: 4px solid #30336b;
+  background-color: lightgrey;
+}
+.table {
+  background-color: white;
+  color: #363636;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid lightgrey;
+}
+.box {
+  border:0 !important;
+  padding: 0;
+}
+div#about {
+  background-color: rgba(0,0,0,0.1);
+  padding: 16px 0;
+  color: white;
+}
+.slate-theme .background-secondary {
+  background-color: #f1f1f1;
+  margin: 0;
+}
+.table-dark thead td {
+  font-weight: 600;
+}
+div#about > strong {
+  color: white;
 }
