@@ -83,7 +83,7 @@ async function init(web3)
         //  var cpuCount = require('os').cpus().length;
 
           // Create a worker for each CPU
-          for (var i = 0; i < 2; i += 1) {
+          for (var i = 0; i < 9; i += 1) {
               cluster.fork();
           }
 
@@ -118,7 +118,56 @@ async function init(web3)
               await tokenInterface.init(redisInterface,web3,accountConfig,poolConfig,pool_env)
               await peerInterface.init(web3,accountConfig,poolConfig,redisInterface,tokenInterface,pool_env) //initJSONRPCServer();
               //tokenInterface.update();
-              peerInterface.listenForJSONRPC();
+              peerInterface.listenForJSONRPC(8586);
+            }
+            // RA - added for
+            if(worker_id == 3)
+            {
+              await redisInterface.init()
+              await tokenInterface.init(redisInterface,web3,accountConfig,poolConfig,pool_env)
+              await peerInterface.init(web3,accountConfig,poolConfig,redisInterface,tokenInterface,pool_env) //initJSONRPCServer();
+              //tokenInterface.update();
+              peerInterface.listenForJSONRPC(9000);
+            }
+            if(worker_id == 4)
+            {
+              await redisInterface.init()
+              await tokenInterface.init(redisInterface,web3,accountConfig,poolConfig,pool_env)
+              await peerInterface.init(web3,accountConfig,poolConfig,redisInterface,tokenInterface,pool_env) //initJSONRPCServer();
+              //tokenInterface.update();
+              peerInterface.listenForJSONRPC(9001);
+            }
+            if(worker_id == 5)
+            {
+              await redisInterface.init()
+              await tokenInterface.init(redisInterface,web3,accountConfig,poolConfig,pool_env)
+              await peerInterface.init(web3,accountConfig,poolConfig,redisInterface,tokenInterface,pool_env) //initJSONRPCServer();
+              //tokenInterface.update();
+              peerInterface.listenForJSONRPC(9002);
+            }
+            if(worker_id == 6)
+            {
+              await redisInterface.init()
+              await tokenInterface.init(redisInterface,web3,accountConfig,poolConfig,pool_env)
+              await peerInterface.init(web3,accountConfig,poolConfig,redisInterface,tokenInterface,pool_env) //initJSONRPCServer();
+              //tokenInterface.update();
+              peerInterface.listenForJSONRPC(9003);
+            }
+            if(worker_id == 7)
+            {
+              await redisInterface.init()
+              await tokenInterface.init(redisInterface,web3,accountConfig,poolConfig,pool_env)
+              await peerInterface.init(web3,accountConfig,poolConfig,redisInterface,tokenInterface,pool_env) //initJSONRPCServer();
+              //tokenInterface.update();
+              peerInterface.listenForJSONRPC(9004);
+            }
+            if(worker_id == 8)
+            {
+              await redisInterface.init()
+              await tokenInterface.init(redisInterface,web3,accountConfig,poolConfig,pool_env)
+              await peerInterface.init(web3,accountConfig,poolConfig,redisInterface,tokenInterface,pool_env) //initJSONRPCServer();
+              //tokenInterface.update();
+              peerInterface.listenForJSONRPC(9005);
             }
       }
 
