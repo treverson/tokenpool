@@ -1,6 +1,15 @@
-var account = {
-  address: '0xf3243bAbF74Ead828ac656877137Df705868fD66',
-  privateKey: '00000'
+var accounts = {
+
+  minting: {
+    address: '0x98B155D9a42791cE475ACc336aE348a72B2e8714',
+    privateKey: 'XXXXXXXXXXXXXX'
+  },
+
+  payment: {
+    address: '0x329115cccbdd4fd3ca497416b4485c2dfccb6936',
+    privateKey: 'XXXXXXXXXXXXXXXXXXXXX'
+  }
+
 }
 
-exports.account = account
+exports.accounts = accounts
