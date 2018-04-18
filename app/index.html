@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico"/>
     <title>0xBTCpool.com</title>
  	<%= require('html-loader!./assets/html/head.html') %>
   </head>
@@ -12,7 +13,7 @@
       <section class="hero circuit-overlay">
         <div class="hero-body">
           <div class="container has-text-centered" id="jumbotron">
-            <h1 class="title font-primary-title color-primary"> 0xBTCpool - 0xBTC Token Mining Pool v1.3.5</h1>
+            <h1 class="title font-primary-title color-primary"> 0xBTCpool - 0xBTC Token Mining Pool</h1>
 		<a v-bind:href='pool.poolData.etherscanMintingURL' >
                 <p>Minting: {{pool.poolData.mintingAddress}}</p>
                </a>
@@ -21,16 +22,16 @@
                 <p>Payments: {{pool.poolData.paymentAddress}}</p><br>
               </a>
 
-             
+
             <div class="columns">
               <div class="column   is-half-desktop " style=" margin: 0 auto;"> <canvas id="hashgraph"></canvas> </div>
             </div>
-            
-            <div class="whitespace-sm"></div> 
+
+            <div class="whitespace-sm"></div>
           </div>
         </div>
       </section>
-     
+
       <div id="solutiontxlist" class="box background-secondary transaction-list "
 
         style="overflow-x:auto; min-height:480px;">

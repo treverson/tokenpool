@@ -1,7 +1,7 @@
 
 const $ = require('jquery');
 
-import logo from '../images/0xbitcoin.png'
+import logo from '../images/0xbitcoin_Axe.png'
 import discordLogo from '../images/discord-logo.png'
 import githubLogo from '../images/GitHub-Mark-64px.png'
 

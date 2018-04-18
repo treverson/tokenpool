@@ -20,12 +20,12 @@
             <h1 class="title font-primary-title color-primary">
               Miner Profile
             </h1>
-            <h2 class="subtitle"> 
+            <h2 class="subtitle">
 
 <!-- Ravid Add address box    -->
  	<br>
 	<form action="/profile/?address="value>
-		Enter your address: <input type="text" size="46" name="address" value=""> 
+		Enter your address: <input type="text" size="46" name="address" value="">
 		<input type="submit" value="Submit">
 	</form>
 <!-- Ravid Add address box    -->
@@ -55,7 +55,8 @@
        	   <tr> <td> Balance: {{  miner.minerData.tokenBalance }}  </td> </tr>
 
 	   <tr> <td> Vardiff: {{  miner.minerData.varDiff }}  </td> </tr>
-    	   <tr> <td> Hashrate: {{  miner.minerData.hashRate }}  </td> </tr>
+	   <tr> <td> Using Custom Vardiff: {{  miner.minerData.usingCustomDifficulty }}  </td> </tr>
+    	   <tr> <td> Hashrate: {{  miner.minerData.hashRateFormatted }}  </td> </tr>
 
      </tbody>
       </table>
@@ -97,7 +98,7 @@
         </table>
 
       </div>
- <!-- Ravid 20180325 - TMP update - invaild shares --> 
+ <!-- Ravid 20180325 - TMP update - invaild shares -->
 <!--  </div> -->
 
       <div id="minerInvalidSharesList" class="box background-secondary " style="overflow-x:auto; min-height:480px;">
@@ -127,7 +128,7 @@
         </table>
 
       </div>
- <!-- End Ravid 20180325 - TMP update - invaild shares --> 
+ <!-- End Ravid 20180325 - TMP update - invaild shares -->
 
       <div id="minerBalancePaymentsList" class="box background-secondary " style="overflow-x:auto; min-height:480px;">
         <div class='subtitle'>Balance Payments</div>
