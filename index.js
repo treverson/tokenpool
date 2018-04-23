@@ -120,7 +120,7 @@ async function init(web3)
               //tokenInterface.update();
               peerInterface.listenForJSONRPC(8586);
             }
-            // RA - added for
+            // RA - added for static diff ports
             if(worker_id == 3)
             {
               await redisInterface.init()
