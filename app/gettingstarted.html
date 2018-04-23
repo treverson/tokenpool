@@ -16,57 +16,69 @@
 
       <section class="hero">
         <div class="hero-body">
-          <div class="container has-text-centered"  >
+          <div class="container has-text-centered">
             <h1 class="title font-primary-title color-primary">
               Getting Started
             </h1> <p>
-            <h2 class="subtitle"> 
+          </div>
+          <div class="container">
+            <h2 class="subtitle">
 	      <p><b> Mining software </b></h2><p>
-		<b> 1. NVIDIA Cuda open source (@Mikers/@Azlehria) (requires <a href="http://www.nvidia.com/download/driverResults.aspx/131443/en-us" target="_blank">Nvidia 391.01 drivers</a> and <a href="https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal" target="_blank">Nvidia CUDA 9.1</a>) <p></p>
+	<p>	<b> 1. NVIDIA Cuda open source (@Mikers/@Azlehria) or Mag517 COSMIC miner. (requires <a href="http://www.nvidia.com/download/driverResults.aspx/131443/en-us" target="_blank">Nvidia 391.01 drivers</a> and
+      <a href="https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal" target="_blank">Nvidia CUDA 9.1</a>) <p></p>
             </h2> </b><p>
-		<a href="https://github.com/azlehria/0xbitcoin-gpuminer/releases" target="_blank">
-          <div class='button-bubble button-primary'>Download CUDA Miner (Win/Linux) from Github</a></div><br>
-   	 * Use version 2.10 for Windows 10 and version 2.9 for Windows 7.<p>
+              <div class="has-text-centered">
+		<a href="https://github.com/azlehria/0xbitcoin-gpuminer/releases" target="_blank"> <div class='button-bubble button-primary'>Download CUDA Miner</a></div>
+    <a href="https://github.com/Mag517/COSMiC-Hashburner/blob/master/COSMiC%20v2.10p5%2BHB_V2.1t.7z" target="_blank"> <div class='button-bubble button-primary'>Download COSMIC Miner</a>
+             </div>
+          </div>
+    <br>
 	<div class="">
 	<br>
- 		Run miner <b>'0xbtcminer-win.exe'</b> <br>
-                Type <b>'help'</b> for all commands <br>
-                For new miners: new account: <b>'account new'</b>. Enter new/your password and remember it <br>
-		* Current miners can use the same ETH address they used before or create new address
-                To view and copy wallet address/private key: <b>'account list'</b>. <br>
-                ***Alwasys save private keys in a safe place and do not share them! <br>
-                Set the miner to mine with this pool <b>'pool select http://0xBTCpool.com:8586</b>' <br>
-                Start mining with <b>'pool mine cuda' </b> for GPU 
+ 		<li>	Run miner <b>'0xbtcminer-win.exe' or 'Cosmic-0xBTC-HB_V2.1t.exe'</b> <br>
+  	<li>  Type <b>'help'</b> for all commands <br>
+  	<li>  New miners: To create new ETH account type: <b>'account new'</b>. Enter new/your password and remember it <br>
+  	<li>  If you want to use your current ETH account address, type: <b>'account select 0x.....................' '(replace 0x.... with your ETH account)'</b><br>
+			* Current miners can use the same ETH address they used before or create new address
+	  <li>  To view and copy wallet address/private key: <b>'account list'</b>. ***Alwasys save private keys in a safe place and do not share them! <br>
+  	<li>  Set the miner to mine with this pool <b>'pool select http://0xBTCpool.com:8586</b>' <br>
+  	<li>  Start mining with <b>'pool mine cuda' </b> for GPU
 
-	 <div class="whitespace-sm"></div>  
-    
+	 <div class="whitespace-sm"></div>
+
 	     <b>2. AMD OpenCL MViS (2% devfee) (Win/Linux) (works with most NVIDIA cards too) </b> <p>
-	
-        <a href="https://github.com/mining-visualizer/MVis-tokenminer/releases" target="_blank">
-          <div class='button-bubble button-primary'>Download OpenCL Miner (Win/Linux) from Github </a></div> <br><p>
-	<div class="">	
-		            
+         <div class="has-text-centered">
+            <a href="https://github.com/mining-visualizer/MVis-tokenminer/releases" target="_blank">
+          <div class='button-bubble button-primary'>Download AMD OpenCL Miner (Win/Linux)</a></div> <br><p>
+
+	 <div class="">
 		<a href="https://github.com/mining-visualizer/MVis-tokenminer/blob/master/README.md" target="_blank"> Developer installation/setup instructions </a><br><br>
-		<li> Move tokenminer.ini to %LocalAppData%/tokenminer on Windows, or $HOME/.config/tokenminer on Linux. 
-		* If that folder path does not exist, you will need to create it manually.
-	<li> For POOL MINING, the main thing you need to specify in the .INI file is your ETH account address to which rewards will be paid out.<br>
- 	<br>
-	Edit tokenminer.ini <br>
-	Change "Host= " to <b>"Host=http://0xBTCpool.com"</b> and "RPCPort=" to <b>"RPCPort=8586"</b> <br>
-	Add your 0xBTC address to <b>"MinerAcct="0x...............................</b>    *replace 0x............ with your address<br>
-	Save tokenminer.ini         *** Do not add your Privte Key.     <br>
-	To run the miner Open CMD/Command and navigate to the folder you saved the miner to<br>
-	Run <b>'tokenminer.exe --list-devices -G'</b> to find your GPU and the platform #<br>
-	Run <b>'tokenminer.exe -P -G --opencl-platform n'</b> n= your GPU platform #.
+    </div>
+	<li> Edit tokenminer.ini <br>
+	<li> Change "Host= " to <b>"Host=http://0xBTCpool.com"</b> and "RPCPort=" to <b>"RPCPort=8586"</b> <br>
+	<li> Add your 0xBTC address to <b>"MinerAcct="0x...............................</b>    *replace 0x............ with your ETH address<br>
+  <li> Remove <b>';'</b> before the line with <b>'MinutesPerShare=2'</b> and change it to <b>'MinutesPerShare=pool'</b><br>
+	<li> Save tokenminer.ini         *** Do not add your Privte Key.     <br>
+	<li> To run the miner Open CMD/Command and navigate to the folder you saved the miner to<br>
+	<li> Run <b>'tokenminer.exe --list-devices -G'</b> to find your GPU and the platform #<br>
+	<li> Edit <b>'star-mining.bat'</b> with the platform # of your GPU<b>'--opencl-platform n'</b> n= your GPU platform #. And save<br>
+  <li> Run <b>'star-mining.bat'<br>
 
-           <div class="whitespace-sm"></div>  
-
+           <div class="whitespace-sm"></div>
 
         </div>
+<div class="has-text-centered">
+        <p> Video Mining Guides</p>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/jNtNw-YsqQU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+   <p>Multi-Card Mining Guide</p>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/ALh6DaRPob8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+           <br />
+
+  </div>
       </section>
 
 
-    
+
 
       <%= require('html-loader!./assets/html/footer.html') %>
 
