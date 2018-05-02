@@ -14,6 +14,7 @@ var queuedTransactionsList;
 var queuedReplacementPaymentsList;
 var unconfirmedBroadcastedPaymentsList;
 var activeTransactionsList;
+var pendingBalanceTransfersList;
 var poolConfig;
 var poolStats;
 var submittedShares;
@@ -83,6 +84,14 @@ export default class OverviewRenderer {
 
       });
 
+      this.socket.on('pendingBalanceTransfers', function (data) {
+
+            console.log('got pendingBalanceTransfers',  data );
+
+              Vue.set(pendingBalanceTransfersList, 'transactions', {tx_list: data.slice(0,50) } )
+
+         });
+
       this.socket.on('unconfirmedBroadcastedPaymentData', function (data) {
 
 
@@ -141,6 +150,16 @@ export default class OverviewRenderer {
             }
           }
         })
+
+      pendingBalanceTransfersList = new Vue({
+          el: '#pendingBalanceTransfersList',
+              data: {
+              //parentMessage: 'Parent',
+              transactions: {
+              tx_list: []
+            }
+          }
+       })
 
         unconfirmedBroadcastedPaymentsList = new Vue({
             el: '#unconfirmedBroadcastedPaymentsList',
@@ -208,6 +227,7 @@ export default class OverviewRenderer {
        this.socket.emit('getPoolStats');
        this.socket.emit('getActiveTransactionData');
        this.socket.emit('getQueuedTransactionData')
+       this.socket.emit('getPendingBalanceTransfers')
        this.socket.emit('getQueuedReplacementPaymentData')
        this.socket.emit('getUnconfirmedBroadcastedPaymentData')
        this.socket.emit('getSubmittedShares')
@@ -230,10 +250,11 @@ export default class OverviewRenderer {
       this.socket.emit('getPoolConfig');
       this.socket.emit('getPoolStats');
       this.socket.emit('getActiveTransactionData');
-      this.socket.emit('getQueuedTransactionData')
-      this.socket.emit('getQueuedReplacementPaymentData')
-      this.socket.emit('getUnconfirmedBroadcastedPaymentData')
-      this.socket.emit('getSubmittedShares')
+      this.socket.emit('getQueuedTransactionData');
+      this.socket.emit('getPendingBalanceTransfers');
+      this.socket.emit('getQueuedReplacementPaymentData');
+      this.socket.emit('getUnconfirmedBroadcastedPaymentData');
+      this.socket.emit('getSubmittedShares');
 
         this.show();
     }

@@ -1,8 +1,7 @@
 
 html {
-  //RA - New colors background blacks #202226,     and blue for navbar #005082
-  //RA - New colors Blue #0277BD
-  //RA - Table font #e5e5e5
+  //color: white;
+  //background-color: pink;
   font-family: "Arial, Helvetica, sans-serif";
 }
 
@@ -18,15 +17,6 @@ a:hover {
 
 .font-primary-title {
   font-family: 'Roboto Mono', monospace;
-}
-
-.poolinfo {
-  text-align: center;
-  margin: 0;
-  font-size: 18px;
-  color: white;
-  padding-bottom: 3px;
-  border-bottom: 1px;
 }
 
 .color-primary {
@@ -129,7 +119,7 @@ a:hover {
 }
 
 .slate-theme-dark {
-  background-color: #005082;
+  background-color: #095900;
 }
 
 .color-orange {
@@ -142,7 +132,7 @@ a:hover {
 }
 
 .slate-theme {
-  background-color: #202226;
+  background-color: #ffffff;
 
   .color-fun-primary {
     color: #e2c08d;
@@ -153,10 +143,10 @@ a:hover {
   }
 
   .background-primary {
-    background-color: #202226;
+    background-color: #ffffff;
   }
   .background-secondary {
-    background-color: #202226;
+    background-color: #ffffff;
   }
 
 }
@@ -195,8 +185,6 @@ a:hover {
 }
 
 .table-dark {
-  // RA color: black;
-  // background-color: transparent;
   color: black;
   background-color: transparent;
 
@@ -226,7 +214,7 @@ a:hover {
 }
 
 .navbar-center > span a {
-  background-color: #0277BD;
+  background-color: #0a5f00;
   padding: 9px;
   border-radius: 3px;
   color: white;
@@ -234,7 +222,7 @@ a:hover {
 }
 
 .navbar-center > span a:hover {
-  background-color: #0277BD;
+  background-color: #094800;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -244,23 +232,23 @@ a:hover {
 
 
 .slate-theme-dark {
-  background-color: #005082;
+  background-color: #095900;
 }
 
 div#home {
 // RA- remove green  background-color: #053400;
- background-color: #202226;
+ background-color: #ffffff;
   border-top: 1px solid #ffd800;
 }
 .navUp > span a, .navDown > span a {
-  background-color: #0277BD;
+  background-color: #084b00;
   padding: 9px;
   border-radius: 3px;
   color: white;
   font-weight: 400;
 }
 .navUp > span a:hover, .navDown > span a:hover {
-  background-color: #0277BD;
+  background-color: #094800;
 }
 
 .navDown {
@@ -275,19 +263,18 @@ div#home {
   margin: 8px 4px 0 0;
 }
 a.navbar-item:hover {
-  background-color: #0277BD;
+  background-color: #094800;
 }
 
 footer.footer.slate-theme-dark {
-  background-color: #202226;
+  background-color: #ffffff;
 }
 
 div#poolconfig, div#poolstats, div#submittedShares, div#submittedSolutions, div#queuedTransactionsList, div#activeTransactionsList {
   min-height: 240px !important;
 }
 div#poolstats, div#submittedSolutions, div#activeTransactionsList {
-// RA -   background-color: #f1f1f1;
-  background-color: #202226;
+  background-color: #f1f1f1;
 }
 .table td, .table th {
   border-right: 1px solid #e9e9e9;
@@ -325,24 +312,13 @@ div#poolstats, div#submittedSolutions, div#activeTransactionsList {
 .subtitle {
   position: relative;
   width: 100%;
-  background: linear-gradient(#0277BD , #016dad);
+  background: linear-gradient(#0c7700, #095900);
   text-align: center;
   margin: 0;
   font-size: 24px;
   color: white;
   padding-bottom: 3px;
   border-bottom: 1px solid yellow;
-}
-
-.subtitle2 {
-  position: relative;
-//  width: 100%;
-  background: #0277BD;
-  text-align: center;
-  margin: 0;
-  font-size: 18px;
-  color: white;
-  padding-bottom: 3px;
 }
 
 @media only screen and (max-width: 1368px) {
@@ -353,8 +329,7 @@ div#poolstats, div#submittedSolutions, div#activeTransactionsList {
 
 .transaction-list .status-pending {
   border-left: 4px solid #ff7b00;
-  // RA - background-color: #f6f6f6;
-  background-color: #202226;
+  background-color: #f6f6f6;
 }
 .transaction-list .status-pending .tx-status-cell {
   color: #ff7b00;
@@ -374,10 +349,8 @@ div#poolstats, div#submittedSolutions, div#activeTransactionsList {
   background-color: lightgrey;
 }
 .table {
-  // RA - background-color: white;
-  background-color: #202226;
-// RA -  color: #363636;
-  color: #e5e5e5;
+  background-color: white;
+  color: #363636;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid lightgrey;
 }
@@ -391,7 +364,7 @@ div#about {
   color: white;
 }
 .slate-theme .background-secondary {
-  background-color: #202226;
+  background-color: #f1f1f1;
   margin: 0;
 }
 .table-dark thead td {

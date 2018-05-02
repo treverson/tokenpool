@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico"/>
     <title><%= htmlWebpackPlugin.options.title %></title>
 
     <%= require('html-loader!./assets/html/head.html') %>
@@ -12,14 +13,17 @@
         <%= require('html-loader!./assets/html/navbar.html') %>
 
 
+
 <div class="page-container slate-theme" id="account">
 
       <section class="hero">
+
         <div class="hero-body">
           <div class="container has-text-centered">
             <h1 class="title font-primary-title color-primary">
               Mining Account List
             </h1>
+<!--  RA - Remove subtitle
             <h2 class="subtitle">
              Token Mining Pool
             </h2>
@@ -27,21 +31,12 @@
 
 
              <div class="whitespace-sm"></div>
-
-
-
-      <!--      <div id="view-account-form" class="box has-text-centered">
-
-             <input class="" v-model="mining_address" placeholder="Mining address">
-
-             <div class="button-bubble button-primary view-account-button acts-as-link"> View your Shares </div>
+-->
 
           </div>
-        -->
-
-
 
         </div>
+
       </section>
 
       <div id="accountlist" class="box  background-secondary" style="overflow-x:auto; min-height:480px;">
@@ -98,7 +93,7 @@
       </div>
 
   -->
-      
+
   </div>
 
 
